@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.CollectionViewPage"
+             Title="CollectionViewPage">
+    <ContentPage.Resources>
+        <x:Array x:Key="Datas" Type="{x:Type x:String}">
+            <x:String>Data1</x:String>
+            <x:String>Data2</x:String>
+            <x:String>Data3</x:String>
+            <x:String>Data4</x:String>
+            <x:String>Data5</x:String>
+            <x:String>Data6</x:String>
+        </x:Array>
+    </ContentPage.Resources>
+    <CollectionView ItemsSource="{StaticResource Datas}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame Padding="10" Margin="5" BorderColor="Gray">
+                    <Label HorizontalOptions="Center" FontSize="16" Text="{Binding}" />
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

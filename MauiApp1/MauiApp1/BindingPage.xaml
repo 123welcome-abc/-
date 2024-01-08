@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.BindingPage"
+             Title="BindingPage">
+
+    <StackLayout Padding="10,0">
+        <Label x:Name="lable"
+               Text="123456"
+               FontSize="80"
+               HorizontalOptions="Center"
+               VerticalTextAlignment="Center" 
+               BindingContext="{x:Reference Name=slider2}"
+               Rotation="{Binding Path=Value}"
+               />
+
+        <Slider x:Name="slider1"
+                VerticalOptions="Center"
+                WidthRequest="600"
+                HeightRequest="50"
+                MinimumTrackColor="Red" 
+                ThumbColor="Red"
+                Value="{Binding Source={x:Reference lable},Path=Opacity}" 
+                />
+        <Slider x:Name="slider2" 
+      
+                Maximum="360"
+                VerticalOptions="Center"
+                WidthRequest="600"
+                />
+    </StackLayout>
+</ContentPage>

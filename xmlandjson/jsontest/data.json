@@ -1,0 +1,38 @@
+﻿{
+	"Items": [
+		{
+			"Id": "001",
+			"Value": "完成项目报告",
+			"CurrentImagePath": "path/to/image1.png",
+			"CreationTime": "2023-01-01 08:00:00",
+			"Note": "这是一个重要的项目报告。",
+			"CompletionTime": "2023-01-05 16:30:00"
+		},
+		{
+			"Id": "002",
+			"Value": "购物清单",
+			"CurrentImagePath": "path/to/image2.png",
+			"CreationTime": "2023-01-02 12:30:00",
+			"Note": "购买杂货和生活用品。",
+			"CompletionTime": null
+		},
+		{
+			"Id": "003",
+			"Value": "锻炼",
+			"CurrentImagePath": "path/to/image3.png",
+			"CreationTime": "2023-01-03 18:45:00",
+			"Note": "进行有氧运动。",
+			"CompletionTime": "2023-01-03T20:00:00"
+		}
+	],
+	"CompletedItems": [
+		{
+			"Id": "004",
+			"Value": "阅读书籍",
+			"CurrentImagePath": null,
+			"CreationTime": "2023-01-04 10:15:00",
+			"Note": "选择一本好书开始阅读。",
+			"CompletionTime": null
+		}
+	]
+}

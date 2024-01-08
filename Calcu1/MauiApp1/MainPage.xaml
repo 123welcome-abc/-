@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:MauiApp1" 
+             x:Class="MauiApp1.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:MainModel/>
+    </ContentPage.BindingContext>
+    <Grid Padding="30,0" RowDefinitions="*,*,*,*,*" ColumnDefinitions="Auto,*">
+        <!--<Label Text="X:" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+        <Entry Text="{Binding X}" Grid.Row="0" Grid.Column="1"/>
+        <Label Text="Y:" VerticalOptions="Center" Grid.Row="1" Grid.Column="0"/>
+        <Entry Text="{Binding Y}" Grid.Row="1" Grid.Column="1"/>
+        <Label Text="Z:" VerticalOptions="Center" Grid.Row="2" Grid.Column="0"/>
+        <Entry Text="{Binding Z}" Grid.Row="2" Grid.Column="1"/>
+        <Button Text="计算" Command="{Binding TestCommand}" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Label Text="Result:" VerticalOptions="Center" Grid.Row="4" Grid.Column="0"/>
+        <Entry Text="{Binding Result}" Grid.Row="4" Grid.Column="1"/>-->
+
+        <StackLayout
+            Spacing="10"
+            Padding="400,50"
+            VerticalOptions="Center">
+            <HorizontalStackLayout Spacing="20">
+            <Label Text="X:" FontSize="18" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Entry Text="{Binding X}" WidthRequest="200"/>
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout Spacing="20">
+                <Label Text="Y:"  FontSize="18" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Entry Text="{Binding Y}" WidthRequest="200"/>
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout Spacing="20">
+                <Label Text="Z:"  FontSize="18" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Entry Text="{Binding Z}" WidthRequest="200"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="50">
+                <Button Text="计算" HorizontalOptions="Center"  Command="{Binding TestCommand}"  />
+
+                <HorizontalStackLayout Spacing="3">
+                    <Label Text="Result:"  VerticalOptions="Center" />
+                    <Entry Text="{Binding Result}" WidthRequest="80" />
+                </HorizontalStackLayout>
+                
+            </HorizontalStackLayout>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

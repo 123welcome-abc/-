@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TODO"
+             x:Class="TODO.DetailPage"
+             BackgroundColor="#2C3E50"
+             Title="任务详情">
+
+    <ContentPage.BindingContext>
+        <local:DataItem />
+    </ContentPage.BindingContext>
+
+    <Frame BackgroundColor="#ECF0F1" Opacity="0.9" CornerRadius="10" Padding="20" Margin="20">
+        <StackLayout Spacing="10">
+            <Label Text="任务详情" FontSize="Large" TextColor="#2C3E50" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" />
+
+            <StackLayout Margin="0,10,0,0">
+                <Label Text="任务名称:" FontSize="Medium" TextColor="#34495E" />
+                <Entry Text="{Binding Value}" FontSize="Medium" TextColor="#2C3E50" Placeholder="输入任务名称" />
+                <!--<Label Text="{Binding Value}" FontSize="Medium" TextColor="#2C3E50" />-->
+            </StackLayout>
+
+            <StackLayout Margin="0,10,0,0">
+                <Label Text="完成时间:" FontSize="Medium" TextColor="#34495E" />
+                <DatePicker Date="{Binding CompletionTime}" Format="yyyy-MM-dd" TextColor="#2C3E50" />
+            </StackLayout>
+
+            <StackLayout Margin="0,10,0,0">
+                <Label Text="备注:" FontSize="Medium" TextColor="#34495E" />
+                <Entry Text="{Binding Note}" FontSize="Medium" TextColor="#2C3E50" Placeholder="输入任务备注" />
+            </StackLayout>
+            
+            
+            
+            <StackLayout Margin="0,10,0,0">
+                <Label Text="创建时间:" FontSize="Medium" TextColor="#34495E" />
+                <Label Text="{Binding CreationTime}" FontSize="Medium" TextColor="#2C3E50" />
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</ContentPage>
